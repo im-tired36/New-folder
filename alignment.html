@@ -9,7 +9,7 @@
                 margin: 8px;
                 margin-left: 50px;
             }
-            #box{
+            #box, #box2{
                 width: 75px;
                 height: 75px;
                 background-color: rgb(82, 126, 165);
@@ -19,7 +19,7 @@
             }
             #box-wrapper{
                 display: grid;
-                grid-template-columns: 4px 800px;
+                grid-template-columns: 1fr 200px 1fr;
                 gap: 5px;
             }
             #flex-wapper{
@@ -27,17 +27,17 @@
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
-                flex-wrap: wrap;
+               
             }
         </style>
     </head>
     <body>
        <h1>Alignment Notes</h1>
        <div id="box-wrapper">
-        <div id="box">
+        <div id="box" onmouseover="disappear() "onmouseout="appear">
             <p>Box 1</p>
         </div>
-        <div id="box">
+        <div id="boxTwo">
             <p>Box 2</p>
         </div>
         <div id="box">
@@ -61,6 +61,31 @@
             <p>Box 4</p>
         </div>
        </div>
-       <button>Click MEE neow</button>
+       <input type="color" id="colorPicker">
+       <button onClick="color()">Click MEE neow</button>
+       <button id="showMore" onClick="show">Show more</button>
+       <script>
+        //makes the webpage interactive
+         function color(){
+            let newColor = document.getElementById("colorPicker").value
+            document.getElementById("box").style.backgroundColor = newColor
+            //document gets the html and then getElementById  searches the html 
+         }
+        function disappear(){
+            document.getElementById("boxTwo").style.display = "none"
+        }
+        function appear(){
+            document.getElementById("boxTwo").style.display = "block"
+        }
+        function show(){
+            let element = document.getElementById("flex-wrapper")
+            if(element.style.display == "flex"){
+                element.style.display = "none"
+            }else{
+                element.style.display = "flex"
+            }
+        }
+
+       </script>
     </body>
 </html>
