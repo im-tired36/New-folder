@@ -3,12 +3,22 @@
     <head>
         <title>Piano</title>
         <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
         <style>
             body{
-                
+
                 background-color: #F3ECDC;
             }
             h1{
+                font-family: "Bagel Fat One", system-ui;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 35px;
                 color:rgb(255, 248, 225);
                 text-align: center;
                 background-color: #AD7670;
@@ -26,12 +36,21 @@
             }**/
             #wheeloffiths{
                 width: 30%;
+                border-radius: 20px;
+                background-color: #DFA679;
+                padding: 15px;
                 
             }
             #pianoperform{
                 width: 40%;
+                border-radius: 20px;
+                background-color:#BFD5BE;
+                padding: 15px;
             }
             #teachers_paragraph{
+                font-family: "Unkempt", cursive;
+                font-weight: 400;
+                font-style: normal;
                 background-color:#B49886 ;
                 padding:10px;
                 margin-left: 70px;
@@ -40,6 +59,9 @@
                 font-size: 20px;
             }
             #performance_paragraph{
+                font-family: "Unkempt", cursive;
+                font-weight: 400;
+                font-style: normal;
                  background-color:#B49886 ;
                 padding:10px;
                 margin-left: 100px;
@@ -48,11 +70,35 @@
                 font-size: 20px;
             }
             #tp_boxes{
-                display:grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 
-            }
+                display:flex;
+                align-content:space-evenly;
 
+
+            }
+            #fundamentals{
+                font-family: "Bagel Fat One", system-ui;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 23px;
+                display:flex;
+                justify-content: center;
+
+            }
+            #list{
+                display:flex;
+                justify-content:center;
+                font-family: "Unkempt", cursive;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 20px;
+            }
+            #images{
+                display:flex;
+                justify-content: space-around;
+            }
+            #link{
+                margin-left: 50px;
+            }
 
         </style>
     </head>
@@ -68,14 +114,18 @@
                 <p >I've been performing solo piano ever since I've started. One recital in spring and one in winter. Every year I've played piano I've always been working toward playing at recitals. I've also played a couple times for my church. I also remember playing in a few competitions but I hadn't really had my heart in piano until about 2 years ago. Then I started playing like it mattered to me. It changed everything. Last year I performed at 2 competitions seriously and won first in both! Currently I'm striving to complete my piano piece for a competition in March.</p>
             </div>
         </div>
-        <h3>Fundamentals of Piano Technique</h3>
-        <ul>
-            <li>Linear Technique -Scales and Arpeggios</li>
-            <li>Vertical/Chordal Technique -Triads, Chords, and Inversions</li>
-            <li>Finger Dexterity -Hanon</li>
-        </ul>
-        <img src="https://i2.pickpik.com/photos/1007/947/822/piano-concert-hall-steinway-preview.jpg" height="7.5%" id="pianoperform"/>
-         <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Circle_of_fifths_bass_clef.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" id="wheeloffiths"/>
-        <p><a href="https://musescore.com/sheetmusic/piano" target="_blank">Sheet Music</a></p>
+        <div id="fundamentals"><h3>Fundamentals of Piano Technique</h3></div>
+        <div id="list">
+            <ul>
+                <li>Linear Technique -Scales and Arpeggios</li>
+                <li>Vertical/Chordal Technique -Triads, Chords, and Inversions</li>
+                <li>Finger Dexterity -Hanon</li>
+            </ul>
+        </div>
+        <div id="images">
+            <img src="https://i2.pickpik.com/photos/1007/947/822/piano-concert-hall-steinway-preview.jpg" height="7.5%" id="pianoperform" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Circle_of_fifths_bass_clef.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" id="wheeloffiths"/>
+        </div>
+        <p id="link"><a href="https://musescore.com/sheetmusic/piano" target="_blank">Sheet Music</a></p>
     </body>
 </html>
