@@ -29,10 +29,14 @@
                 align-items: center;
                
             }
+            #macaw{
+                width: 150px;
+            }
         </style>
     </head>
     <body>
        <h1>Alignment Notes</h1>
+       <img src="https://img.magnific.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80" alt = id="macaw" onmouseout="changeImage()">
        <div id="box-wrapper">
         <div id="box" onmouseover="disappear() "onmouseout="appear">
             <p>Box 1</p>
@@ -66,7 +70,16 @@
        <button id="showMore" onClick="show">Show more</button>
        <script>
         //makes the webpage interactive
-         function color(){
+        let images = ["https://img.magnific.com/free-photo/closeup-shot-beautiful-butterfly-with-interesting-textures-orange-petaled-flower_181624-7640.jpg?semt=ais_hybrid&w=740&q=80", "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-nature-scenery-free-image.jpeg?w=600&quality=80", "https://media.springernature.com/lw703/springer-static/image/art%3A10.1038%2F528452a/MediaObjects/41586_2015_Article_BF528452a_Figg_HTML.jpg", "https://img.magnific.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"]
+        let current= 0 
+        function changeImage(){
+            current+=1
+            document.getElementById("macaw").src = images[current]
+            if (current > 3){
+                current = 0
+            }
+        }
+        function color(){
             let newColor = document.getElementById("colorPicker").value
             document.getElementById("box").style.backgroundColor = newColor
             //document gets the html and then getElementById  searches the html 
