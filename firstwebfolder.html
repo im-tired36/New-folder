@@ -99,15 +99,16 @@
             #link{
                 margin-left: 50px;
             }
-            #button{
-
-            }
             #hiddenimg{
                 width: 45%;
                 height: auto;
-                display: none;
+                display: flex;
+                padding: 10px;
             }
             #hiddenparagraph{
+                display: flex;
+            }
+            #hiddenthings{
                 display: none;
             }
 
@@ -138,11 +139,13 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Circle_of_fifths_bass_clef.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" id="wheeloffiths"/>
         </div>
         <p id="link"><a href="https://musescore.com/sheetmusic/piano" target="_blank">Sheet Music</a></p>
-        <button id="button" onclick="show()" >Click for More About Pianos</button>
-        <img onmouseover="changeimg()" onmouseout="changeimgback()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeQDcdwNDZmqVKQ45V1BNNg3DMTUQuqdOIUPUT2TWCVw&s=10" id="hiddenimg" >
-        <p id="hiddenparagraph">
-            Pianos work by hitting a hammer onto a tuned string when you press the keys. The key is a lever that acts like a seesaw when you press it. When the key is moved, it propels the felt covered wooden hammer upward and hits the strings. The strings are held by a cast iron frame to be able to hold the 20 to 24 tons of tension caused by the 230 to 243 steel strings. There are also dampers and soundboards to stop the sound after the key is back to its original position and amplify the sound. 
-        </p>
+        <button id="button" onclick="showandHide()" >Click for More About Pianos</button>
+        <div id="hiddenthings">
+            <img onmouseover="changeimg()" onmouseout="changeimgback()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeQDcdwNDZmqVKQ45V1BNNg3DMTUQuqdOIUPUT2TWCVw&s=10" id="hiddenimg" >
+            <p id="hiddenparagraph">
+                Pianos work by hitting a hammer onto a tuned string when you press the keys. The key is a lever that acts like a seesaw when you press it. When the key is moved, it propels the felt covered wooden hammer upward and hits the strings. The strings are held by a cast iron frame to be able to hold the 20 to 24 tons of tension caused by the 230 to 243 steel strings. There are also dampers and soundboards to stop the sound after the key is back to its original position and amplify the sound. 
+            </p>
+        </div>
     </body>
     <script>
         function changeimg(){
@@ -151,9 +154,15 @@
         function changeimgback(){
             document.getElementById("hiddenimg").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeQDcdwNDZmqVKQ45V1BNNg3DMTUQuqdOIUPUT2TWCVw&s=10"
         }
-        function show(){
-            document.getElementById("hiddenimg").style.display = "block"
-            document.getElementById("hiddenparagraph").style.display="block"
-        }
-    </script>
-</html>
+        function showandHide(){
+            let element = document.getElementById("hiddenthings") 
+            if(element.style.display =="flex"){
+                element.style.display = "none"
+                document.getElementById("button").innerHTML = "Click for More About Pianos"
+            }else{
+                element.style.display = "flex"
+                document.getElementById("button").innerHTML = "Show Less"
+            }
+            }
+        </script>
+    </html>
