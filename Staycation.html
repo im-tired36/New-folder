@@ -8,8 +8,15 @@
                 text-align: center;
             }
             #snowboardingimg{
-                width: 35%;
-                height:auto;
+                width: auto;
+                height: 50%;
+                margin: 25px;
+            }
+            #skiingimg{
+                width: auto;
+                height: 50%;
+                margin: 25px;
+            
             }
 
             body{
@@ -27,20 +34,12 @@
             }
            #resorts{
             text-align: center;
-            text-s
            }
-
-            #images{
-                display:flex;
-                align-content:space-evenly;
-
-
-            }
  
             
             #list{
                 display:flex;
-                justify-content:center;
+                justify-content:space-evenly;
                 font-family: "Unkempt", cursive;
                 font-weight: 400;
                 font-style: normal;
@@ -48,7 +47,7 @@
             }
             #images{
                 display:flex;
-                justify-content: space-around;
+                justify-content: space-evenly;
             }
             #link{
                 margin-left: 50px;
@@ -77,31 +76,49 @@
         
 
         <div id="images">
-            <div id="teachers_paragraph">
-                 <img id="snowboardingimg" src="https://cdn.outsideonline.com/wp-content/uploads/2023/09/snowboard-test-main_h-1.jpg"
+            <div id="">
+                 <img id="snowboardingimg" src="https://i2.pickpik.com/photos/329/838/433/snowboarding-snowboarder-sport-fun-preview.jpg">
             </div>
-            <div id="performance_paragraph">
-                <img id="skiingimg" src="https://ridgeandriver.com/cdn/shop/articles/Snow_Skiing.jpg?v=1741882210"               
+            <div id="">
+                <img id="skiingimg" src="https://ridgeandriver.com/cdn/shop/articles/Snow_Skiing.jpg?v=1741882210" >              
             </div>
         </div>
         <div id="resorts"><h2>All the Skiing/Snowboarding Resorts in Utah</h2></div>
         <div id="list">
-            <ul>
-                <li>Linear Technique -Scales and Arpeggios</li>
-                <li>Vertical/Chordal Technique -Triads, Chords, and Inversions</li>
-                <li>Finger Dexterity -Hanon</li>
-            </ul>
+            <div>
+                <ul>
+                    <li>Alta Ski Area</li>
+                    <li>Snowbird</li>
+                    <li>Brighton</li>
+                    <li>Solitude Mountain</li>
+                    <li>Park City Mountain</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Deer Valley</li>
+                    <li>Woodard Park City</li>
+                    <li>Sundance</li>
+                    <li>Snow Basin</li>
+                    <li>Powder Moutain</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Nordic Valley</li>
+                    <li>Beaver Mountain</li>
+                    <li>Cherry Peak</li>
+                    <li>Brian Head</li>
+                    <li>Eagle Point</li>
+                </ul>
+            </div>
         </div>
-        <div id="images">
-            <img src="https://i2.pickpik.com/photos/1007/947/822/piano-concert-hall-steinway-preview.jpg" height="7.5%" id="pianoperform" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Circle_of_fifths_bass_clef.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" id="wheeloffiths"/>
-        </div>
-        <p id="link"><a href="https://musescore.com/sheetmusic/piano" target="_blank">Sheet Music</a></p>
-        <button id="button" onclick="showandHide()" >Click for More About Pianos</button>
+       
+        <button id="button" onclick="showandHide()" >More Reasons!</button>
         <div id="hiddenthings">
             <img onmouseover="changeimg()" onmouseout="changeimgback()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeQDcdwNDZmqVKQ45V1BNNg3DMTUQuqdOIUPUT2TWCVw&s=10" id="hiddenimg" >
             <p id="hiddenparagraph">
-                Pianos work by hitting a hammer onto a tuned string when you press the keys. The key is a lever that acts like a seesaw when you press it. When the key is moved, it propels the felt covered wooden hammer upward and hits the strings. The strings are held by a cast iron frame to be able to hold the 20 to 24 tons of tension caused by the 230 to 243 steel strings. There are also dampers and soundboards to stop the sound after the key is back to its original position and amplify the sound. 
+              Some more reason to go skiing and snowboarding in Utah is
             </p>
         </div>
     </body>
@@ -116,7 +133,7 @@
             let element = document.getElementById("hiddenthings") 
             if(element.style.display =="flex"){
                 element.style.display = "none"
-                document.getElementById("button").innerHTML = "Click for More About Pianos"
+                document.getElementById("button").innerHTML = "More Reasons!"
             }else{
                 element.style.display = "flex"
                 document.getElementById("button").innerHTML = "Show Less"
