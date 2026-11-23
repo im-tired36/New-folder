@@ -3,19 +3,45 @@
     <head>
         <title>Snowboarding & Skiing</title>
         <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Jacquard+24&family=MedievalSharp&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Cedarville+Cursive&family=Jacquard+24&family=MedievalSharp&display=swap" rel="stylesheet">
         <style>
             #title{
                 text-align: center;
+                font-family: "BBH Bogle", sans-serif;
+                font-weight: 300;
+                font-style: normal;
+                font-size: 23px
+            
+            #in{
+                text-align: center;
+                font-family: "Cedarville Cursive", cursive;
+                font-weight: 400;
+                font-style: normal;
+
             }
+}
+;
+            
             #snowboardingimg{
-                width: auto;
-                height: 50%;
+                width: 75%;
+                height: auto;
                 margin: 25px;
+                background-color: #69a8cf75;
+                padding: 15px;
+                border-radius: 15px;
             }
             #skiingimg{
-                width: auto;
-                height: 50%;
+                width: 85%;
+                height: auto;
                 margin: 25px;
+                background-color: #69a8cf75;
+                padding: 15px;
+                border-radius: 15px;
             
             }
 
@@ -34,6 +60,9 @@
             }
            #resorts{
             text-align: center;
+            font-family: "BBH Bogle", sans-serif;
+            font-weight: 300;
+
            }
  
             
@@ -58,11 +87,16 @@
                 display: flex;
                 padding: 10px;
             }
-            #hiddenparagraph{
+            #hiddenlist{
                 display: flex;
+                flex-direction:column ;
             }
             #hiddenthings{
                 display: none;
+            }
+            #intro{
+                margin-left: 15%;
+                margin-right: 15%;
             }
 
         </style>
@@ -70,10 +104,12 @@
     <body>
         <div id="title">
             <h1>Skiing & Snowboarding</h1>
-            <h5>in</h5>
+            <h5 id="in">in</h5>
             <h1>UTAH</h1>
         </div>
-        
+        <p id="intro">
+            Snowboarding or skiing in any of the 15 skiing/snowboarding resorts in Utah is an absolute wonder. The light, dry snow is said to be "the Greatest Snow on Earth" since 1980! The reason why is because of Utah's unique geography. The moutains, Great Salt Lake and even being East of the Western Coast all add up to make the miracle of Utah's snow. People from all over the world come to Utah to enjoy the treasures it gives. 
+        </p>
 
         <div id="images">
             <div id="">
@@ -116,18 +152,21 @@
        
         <button id="button" onclick="showandHide()" >More Reasons!</button>
         <div id="hiddenthings">
-            <img onmouseover="changeimg()" onmouseout="changeimgback()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeQDcdwNDZmqVKQ45V1BNNg3DMTUQuqdOIUPUT2TWCVw&s=10" id="hiddenimg" >
-            <p id="hiddenparagraph">
-              Some more reason to go skiing and snowboarding in Utah is
-            </p>
+            <img onmouseover="changeimg()" onmouseout="changeimgback()" src="https://www.snowskool.com/uploads/images/Snowboarding_and_Skiing%2C_Featured_Image.jpg" id="hiddenimg" >
+            <ul id="hiddenlist">
+              <li>There are so many different resorts so you can go to one that fits your vibe</li>
+              <li>The scenery at the resorts are so beautiful</li>
+              <li>It's a great place to go with groups, big or small</li>
+              <li>There are all kinds of different trails to fit your skill level</li>
+            </ul>
         </div>
     </body>
     <script>
         function changeimg(){
-            document.getElementById("hiddenimg").src="https://upload.wikimedia.org/wikipedia/commons/d/df/Steinway_grand_piano_interior.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+            document.getElementById("hiddenimg").src="https://visitlaketahoe.com/wp-content/uploads/2023/10/sierra-top-of-grandview-view-of-tahoe-1080x720-1-1024x683.jpg"
         }
         function changeimgback(){
-            document.getElementById("hiddenimg").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeQDcdwNDZmqVKQ45V1BNNg3DMTUQuqdOIUPUT2TWCVw&s=10"
+            document.getElementById("hiddenimg").src="https://www.snowskool.com/uploads/images/Snowboarding_and_Skiing%2C_Featured_Image.jpg"
         }
         function showandHide(){
             let element = document.getElementById("hiddenthings") 
